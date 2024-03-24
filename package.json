@@ -1,31 +1,30 @@
+
 {
     "name": "social-network-api",
-    "version": "1.0",
+    "version": "1.0.0",
     "description": "## Description",
     "main": "server.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node server.js",
-        "seed": "node utils/seed",
-        "dev": "nodemon index"
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node server.js"
     },
     "repository": {
-        "type": "git",
-        "url": ""
+      "type": "git",
+      "url": ""
     },
     "keywords": [],
     "author": "",
     "license": "MIT",
     "bugs": {
-        "url": "http://github.com/ThatGiodude"
+      "url": ""
     },
-    "homepage": "https//github.com",
+    "homepage": "",
     "dependencies": {
-        "express": "^4.19.1",
-        "mongoose": "^8.2.3",
+      "express": "^4.18.1",
+      "mongoose": "^6.5.4"
     },
     "devDependencies": {
         "jest": "^29.7.0",
         "nodemon": "^3.1.0"
     }
-}
+  }
