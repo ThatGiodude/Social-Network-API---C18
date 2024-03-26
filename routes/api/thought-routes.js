@@ -1,21 +1,25 @@
+// Import the necessary dependencies and controllers
 const router = require('express').Router();
-
 const {
     getAllThoughts,
-    getSingleThought,
+    getThoughtsById,
     createThought,
-    updateThought,
     deleteThought,
-    addReaction,
-    deleteReaction
+    updateThoughtById,
+    createReaction,
+    deleteReaction,
 } = require('../../controllers/thought-controller');
 
+// Define the routes for GET and POST all Thoughts
 router.route('/').get(getAllThoughts).post(createThought);
 
-router.route('/:id').get(getSingleThought).put(updateThought).delete(deleteThought);
+// Define the routes for GET, PUT and DELETE Thoughts
+router.route('/:thoughtId').get(getThoughtsById).put(updateThoughtById).delete(deleteThought);
 
-router.route('/:thoughtId/reactions/')
-    .post(addReaction).delete(deleteReaction);
-    
+// Define the route for POST reaction to a Thought
+router.route('/:thoughtId/reactions').post(createReaction);
 
+// Define the route for DELETE reaction to a Thought
+router.route('/:thoughtId/reactions/:reactionId').delete(deleteReaction);
+// Export the router
 module.exports = router;
